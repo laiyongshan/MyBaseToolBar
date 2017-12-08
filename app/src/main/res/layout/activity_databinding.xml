@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userViewModel"
+            type="com.yeohe.mycollapesingapplication.mvvm.UserViewModel"
+            />
+
+        <variable
+            name="myHandler"
+            type="com.yeohe.mycollapesingapplication.mvvm.MyHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFF"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyHandler"
+            android:padding="10dp"
+            android:onClick="@{myHandler.click}"
+            />
+
+
+        <!--<Button-->
+            <!--android:id="@+id/updata_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="更新数据"-->
+            <!--android:padding="10dp"-->
+            <!--android:onClick="@{userViewModel.onClick}"-->
+            <!--/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{userViewModel.firstName}"
+            android:textSize="16sp"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@{userViewModel.lastName}"
+            />
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dp"-->
+            <!--android:textSize="16sp"-->
+            <!--android:text="@{userViewModel2.displayName}"-->
+            <!--/>-->
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            app:iv="@{userViewModel.iv}"
+            android:visibility="visible"
+            android:background="#f0f0f0"
+            ></ImageView>
+
+    </LinearLayout>
+
+
+</layout>
